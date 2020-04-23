@@ -1,2 +1,2 @@
-# JenkinsPipelineAndroid
-Jenkins Pipeline Android
+# JenkinsAndroidTest
+Jenkins Android Test Project
