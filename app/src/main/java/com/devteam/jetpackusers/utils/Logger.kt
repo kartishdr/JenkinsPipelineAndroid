@@ -16,7 +16,7 @@ object Logger {
         log("**** -> $msg")
     }
 
-    // logs thread details
+    // logs thread detail
     fun logThreadDetails(from: String) {
         log(
             "*** $from  --> Thread # ${Thread.currentThread().id} with " +
