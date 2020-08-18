@@ -32,15 +32,9 @@ pipeline {
       post {
               success {
                 // Notify if the upload succeeded
-                mail to: 'nkdiyasys@gmail.com', subject: 'New build available!', body: 'Check it out!'
+                archiveArtifacts artifacts: '**/*.apk', fingerprint: true, onlyIfSuccessful: true 
               }
             }
       }
     }
-  post {
-    failure {
-      // Notify developer team of the failure
-      mail to: 'nkdiyasys@gmail.com', subject: 'Oops!', body: "Build ${env.BUILD_NUMBER} failed; ${env.BUILD_URL}"
-    }
-  }
 }
